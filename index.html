@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--script src="scrpit.js"></script-->  
+</head>
+<body>
+    <div class="container">
+        <h1>Oluwatosin Sasona Christianah</h1>
+    <div class="intro">
+    <p>Hi, I am a Frontend Web Developer.Proficient in essential Web development skills.
+    </p>
+    <img class="profile-pic" src="images/DSC_5001.JPG" alt="profile-pic">
+    </div>
+    <div class="portfolio">
+        <div class="portfolio-items">
+            <div class="title">Skills</div>
+            <div class="content">
+                <img src="images/html icon.png" height="100px" width="100px" alt="html">
+                <img src="images/download.png" height="100px" width="100px" alt="Css">
+                <img src="images/javascript icon.jpg" height="100px" width="100px" alt="Javascript">
+                <img src="images/php icon.png" height="100px" width="100px" alt="php">
+                <img src="images/github icon.png" height="100px" width="100px" alt="github">
+            </div>
+        </div>
+        <div class="portfolio-items">
+            <div class="title">Interest</div>
+            <div class="content">
+                <ul>
+                    <li>Reading</li>
+                    <li>Meeting People of like Minds</li>
+                    <li>Travelling</li>
+                    <li>Cooking</li>
+                </ul>
+            </div>
+        </div>
+        <div class="portfolio-items">
+            <div class="title">Education</div>
+            <div class="content">
+                <ul>
+                    <li>Tertiary Institution: Bayero University Kano
+                        <li>Bachelor's Degree in Computer Science</li>
+                    </li>
+                    <li>Secondary School
+                        <li>Abbas Maje Nassarawa Secondary School</li>
+                        <li>No.18 Nomansland, Sabon-gari Kano</li>
+                    </li>
+                    <li>Primary School
+                        <li>Hope Nursery and Primary School</li>
+                        <li>Tudun Bojuwa, Kurna Asabe Kano.</li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="portfolio-items">
+            <div class="title">Project</div>
+            <div class="content">
+                <p><a href="">Zoge E-commerce Website</a></p>
+                <p><a href="">Nice Fragrance store website</a></p>
+                <p><a href="">To-do list</a></p>
+                <p><a href="">Eatery</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        const portfolioItems = document.querySelectorAll(".portfolio-items");
+        portfolioItems.forEach(item => {
+            const ptitle = item.querySelector('.title');
+            const pcontent = item.querySelector('.content');
+            
+            ptitle.addEventListener('click', () => {
+                for(var i=0; i<portfolioItems.length; i++){
+                    if(portfolioItems[i] != item){
+                        portfolioItems[i].classList.remove('active');
+                    }else{
+                        item.classList.toggle('acitve');
+                    }
+                }
+                item.classList.toggle('active');
+    });
+    
+});
+    </script>
+</body>
+</html>
